@@ -4,7 +4,7 @@ import pkg from "~/../package.json";
 
 export default async function renderContent(
   cssPaths: string[],
-  render: (appRoot: HTMLElement) => void
+  render: (appRoot: HTMLElement) => void,
 ) {
   const containerId = `${pkg.name}-ext-container`;
   document.getElementById(containerId)?.remove();

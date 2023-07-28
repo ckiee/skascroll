@@ -32,7 +32,8 @@ web-ext run --target=firefox-android --source-dir dist
 web-ext run --target=firefox-android --source-dir dist --android-device=XXXXXXXXXXX
 ```
 
-u can edit the code now and it should just reload 
+u can edit the code now and it should just reload
 
 ## license
+
 see `LICENSE` file, it's MIT.

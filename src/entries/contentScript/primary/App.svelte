@@ -1,15 +1,15 @@
 <script lang="ts">
- // import logo from "~/assets/logo.svg";
- //
- // const logoImageUrl = new URL(logo, import.meta.url).href;
- function s(pages: number) {
-   window.scrollBy(0, pages * window.innerHeight);
- }
+  // import logo from "~/assets/logo.svg";
+  //
+  // const logoImageUrl = new URL(logo, import.meta.url).href;
+  function s(pages: number) {
+    window.scrollBy(0, pages * window.innerHeight);
+  }
 </script>
 
 <div class="overlay">
-  <button class="up" aria-label="Page up" on:click={() => s(1)}></button>
-  <button class="down" aria-label="Page down" on:click={() => s(-1)}></button>
+  <button class="up" aria-label="Page up" on:click={() => s(-1)}></button>
+  <button class="down" aria-label="Page down" on:click={() => s(1)}></button>
   🐈
 </div>
 
@@ -29,15 +29,21 @@
     text-align: center;
   }
 
- .up, .down {
-   width: 100%;
-   height: 64px;
-   font-size: 32px;
- }
- .up::before {
-   content: "↑"
- }
- .down::before {
-   content: "↓"
- }
+  button {
+    width: 100%;
+    height: 64px;
+    font-size: 32px;
+    border: 0;
+  }
+
+  button:hover {
+    background: #fef;
+  }
+
+  .up::before {
+    content: "↑";
+  }
+  .down::before {
+    content: "↓";
+  }
 </style>
