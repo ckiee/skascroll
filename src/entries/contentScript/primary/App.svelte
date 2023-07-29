@@ -1,4 +1,5 @@
 <script lang="ts">
+ import "~/index.css";
   // import logo from "~/assets/logo.svg";
   //
   // const logoImageUrl = new URL(logo, import.meta.url).href;
