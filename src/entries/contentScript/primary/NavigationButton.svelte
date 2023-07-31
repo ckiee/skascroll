@@ -15,8 +15,9 @@
     // touchStart -> touchEnd is not guaranteed, as the user may have multiple fingers
     touchEnd();
     timeout = setTimeout(() => {
+      click();
       interval = setInterval(click, 400);
-    }, 200);
+    }, 50);
     // TODO(config): ^ two hardcoded ms values
   }
 
