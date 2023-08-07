@@ -4,13 +4,13 @@
   "author": "ckie",
   "description": "accessible scrolling for the skye on the fedis",
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && web-ext build --source-dir dist --overwrite-dest",
     "watch": "vite build --watch --mode development --minify false",
     "dev": "vite",
     "serve:firefox": "web-ext run --start-url \"about:debugging#/runtime/this-firefox\"  --source-dir ./dist/",
     "serve:chrome": "web-ext run -t chromium --start-url \"https://example.com\" --source-dir ./dist/",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "fmt": "prettier --write  --plugin prettier-plugin-svelte ."
+    "fmt": "prettier --write --plugin prettier-plugin-svelte ."
   },
   "license": "MIT",
   "devDependencies": {

@@ -131,3 +131,6 @@ dist
 
 # distributable extension build for user testing
 dist.tar*
+
+# web-ext build
+web-ext-artifacts
