@@ -1,39 +1,45 @@
 # skascroll
 
-add scroll buttons for pages (WebExtension)
+**skascroll** is a browser WebExtension that adds scroll buttons to web pages, enhancing accessibility for individuals with repetitive strain injury and related conditions. It is primarily designed for Firefox Mobile ([addon link](https://addons.mozilla.org/en-US/firefox/addon/skascroll/)) but may also be compatible with other browsers.
 
-- firefox mobile intended, but others may work.
-- project template: https://github.com/samrum/vite-plugin-web-extension
-- quite bare
-- the interesting file is `src/entries/contentScript/primary/App.svelte`
+- Based on the [vite-plugin-web-extension](https://github.com/samrum/vite-plugin-web-extension) template.
+- The project is minimalistic, the main file is located @ `src/entries/contentScript/primary/App.svelte`.
 
-## how use,, (dev)
+## Development Setup
 
-```
-npm i
-```
+To set up the development environment, begin by installing the necessary npm packages:
 
-now these in parallel:
-
-```
-npm run watch
+```bash
+npm install
 ```
 
-```
-web-ext run --target=firefox-android --source-dir dist
-    Applying config file: ./package.json
-    Running web extension from /home/ckie/git/skascroll/dist
+Once the dependencies are installed, run the following commands in parallel to start the development process:
 
-    Android devices found:
-    - XXXXXXXXXXX
+1. Begin watching for changes:
 
-    UsageError: Select an android device using --android-device=<name>
+   ```bash
+   npm run watch
+   ```
 
-web-ext run --target=firefox-android --source-dir dist --android-device=XXXXXXXXXXX
-```
+2. Launch the web extension on a connected Android device running Firefox:
 
-u can edit the code now and it should just reload
+   ```bash
+   web-ext run --target=firefox-android --source-dir dist
+   ```
 
-## license
+   Upon running the command above, you may encounter a message indicating available Android devices. Select a device using the following command:
 
-see `LICENSE` file, it's MIT.
+   ```bash
+   web-ext run --target=firefox-android --source-dir dist --android-device=<DeviceID>
+   ```
+
+   Replace `<DeviceID>` with the actual ID of your Android device (found in the error message from the last command)
+
+With this setup, you can edit the code, and changes should automatically reload.
+
+Raise an issue if you need help!
+
+## License
+
+This project is licensed under the MIT License. For more details, please refer to the `LICENSE` file.
+
